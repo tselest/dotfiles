@@ -1,0 +1,20 @@
+# keyboard Layout
+#setxkbmap 'us,gr' -option 'grp:alt_shift_toggle' &
+
+# Wallpaper
+nitrogen --restore &
+
+# dwmstatus
+# dwmstatus 2>&1 >/dev/null &
+
+#/home/tselest/dwm-bar/dwm_bar.sh &
+
+# Compositor
+picom -f &
+clipit &
+megasync &
+nm-applet &
+xfce4-power-manager &
+thunderbird &
+#xfce4-power-manager-settings &
+#blueman-manager &
