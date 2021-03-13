@@ -100,7 +100,7 @@ keys = [
     Key([mod], "t", lazy.spawn("firefox")),
     Key([mod], "e", lazy.spawn("brave")),
     Key([mod], "f", lazy.spawn("rofi -combi-modi window,drun,ssh -theme gruvbox-dark -font 'JetbrainsMonoMedium Nerd Font Mono 13' -show combi")),
-    Key([mod], "g", lazy.spawn("rhythmbox")),
+    # Key([mod], "g", lazy.spawn("rhythmbox")),
     Key([], "Print", lazy.spawn(["sh", "-c", " maim -u ~/Pictures/screenshots/screen_$(date +%Y-%m-%d-%T).png"])), 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
