@@ -100,7 +100,7 @@ keys = [
     Key([mod], "t", lazy.spawn("firefox")),
     Key([mod], "e", lazy.spawn("brave")),
     Key([mod], "f", lazy.spawn("rofi -combi-modi window,drun,ssh -theme gruvbox-dark -font 'JetbrainsMonoMedium Nerd Font Mono 13' -show combi")),
-    # Key([mod], "g", lazy.spawn("rhythmbox")),
+    #Key([mod], "g", lazy.spawn("rhythmbox")),
     Key([], "Print", lazy.spawn(["sh", "-c", " maim -u ~/Pictures/screenshots/screen_$(date +%Y-%m-%d-%T).png"])), 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
@@ -130,7 +130,7 @@ keys = [
 group_names =  [("1", {'layout': 'monadtall', 'init': True}),
             ("2", {'layout': 'monadtall','matches':[Match(wm_class=["rhythmbox"])]}),
             ("3", {'layout': 'monadtall', 'matches':[Match(wm_class=["pcmanfm"])]}),
-            ("4", {'layout': 'treetab', 'matches':[Match(wm_class=["firefox"])]}),
+            ("4", {'layout': 'monadtall', 'matches':[Match(wm_class=["firefox"])]}),
             ("5", {'layout': 'monadtall', 'matches':[Match(wm_class=["mpv"])]}),
             ("6", {'layout': 'monadtall','matches':[Match(wm_class=["Thunderbird"])]})]
 #-----------------------------------------------------------
