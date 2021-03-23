@@ -8,7 +8,7 @@ set sortnumbers
 set undolevels=100
 set vimhelp
 set norunexec
-colorscheme gruvbox
+colorscheme onedark
 set timefmt=%m/%d\ %H:%M
 set wildmenu
 set wildstyle=popup
@@ -102,8 +102,8 @@ filextype {*.djvu},<image/vnd.djvu>
 " Audio
 filetype {*.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus},
         \<audio/*>
-    \ {Play using mocp}
-	\ kitty -e mocp %f &,
+    \ {Play using deadbeef}
+	\ deadbeef %f ,
        \ {Play using ffplay}
        \ ffplay -nodisp -autoexit %c,
        \ {Play using MPlayer}
@@ -224,6 +224,7 @@ filetype {*.rar},<application/x-rar>
        \ {Mount with rar2fs}
        \ FUSE_MOUNT|rar2fs %SOURCE_FILE %DESTINATION_DIR,
 fileviewer {*.rar},<application/x-rar> unrar v %c
+
 
 " IsoMount
 filetype {*.iso},<application/x-iso9660-image>

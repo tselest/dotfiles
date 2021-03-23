@@ -8,10 +8,11 @@ set nocompatible		" be IMproved, required
 filetype off			" required
 
 call plug#begin('~/.config/nvim/plugged')
-"Plug 'sonph/onehalf', { 'rtp': 'vim' }
-"Plug 'dracula/vim', { 'as': 'dracula' }
-"Plug 'embark-theme/vim', { 'as': 'embark' }
-Plug 'gruvbox-community/gruvbox'
+" Plug 'sainnhe/gruvbox-material'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+" Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'embark-theme/vim', { 'as': 'embark' }
+" Plug 'gruvbox-community/gruvbox'
 Plug 'tpope/vim-fugitive'
 "Plug 'preservim/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -27,13 +28,12 @@ Plug 'vifm/vifm.vim'
 "Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
                                    
-colorscheme gruvbox
-" let g:airline_theme='onehalfdark'
-" lightline
-" let g:lightline = { 'colorscheme': 'onehalfdark' }
+colorscheme onehalfdark
+let g:lightline = { 'colorscheme': 'onehalfdark' }
 set incsearch
 set hidden
 set undodir=~/.config/nvim/undodir
@@ -57,7 +57,7 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4 autoindent 
 set expandtab
 set smartindent
-setlocal spell spelllang=en_us
+"setlocal spell spelllang=en_us
 set mouse=a  
 set confirm             " Prompt confirmation dialogs
 set showtabline=4       " Show tab bar
@@ -110,9 +110,9 @@ let g:vimwiki_markdown_link_ext = 1
 let g:vimwiki_list = [{'path': '~/Documents/VimWiki/', 'syntax':'markdown', 'ext':'.md' }]
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 
-let g:lightline = {
-      \ 'colorscheme': 'seoul256',
-      \ }
+"let g:lightline = {
+"      \ 'colorscheme': 'seoul256',
+"      \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vifm

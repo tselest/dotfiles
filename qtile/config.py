@@ -3,7 +3,7 @@
 #              \ \                 
 #  ___ ____ ___ \ \   ___ ____ ___ 
 # (   )  ._) __) > \ / __)  ._|   )
-#  | ( () )> _) / ^ \> _| () ) | | 
+#  \ ( () )> _) / ^ \> _| () ) | | 
 #   \_)__/ \___)_/ \_\___)__/   \_)
 #                                 
 # 
@@ -98,7 +98,6 @@ keys = [
     Key([mod], "d", lazy.spawn("dmenu_run -h 28 ")),
     Key([mod], "p", lazy.spawn("firefox --private-window")),
     Key([mod], "t", lazy.spawn("firefox")),
-    Key([mod], "e", lazy.spawn("brave")),
     Key([mod], "f", lazy.spawn("rofi -combi-modi window,drun,ssh -theme gruvbox-dark -font 'JetbrainsMonoMedium Nerd Font Mono 13' -show combi")),
     #Key([mod], "g", lazy.spawn("rhythmbox")),
     Key([], "Print", lazy.spawn(["sh", "-c", " maim -u ~/Pictures/screenshots/screen_$(date +%Y-%m-%d-%T).png"])), 
@@ -128,9 +127,9 @@ keys = [
 #groups = [Group(i) for i in "123456"]
 #-----------------------------------------------------------
 group_names =  [("1", {'layout': 'monadtall', 'init': True}),
-            ("2", {'layout': 'monadtall','matches':[Match(wm_class=["rhythmbox"])]}),
+            ("2", {'layout': 'monadtall'}),
             ("3", {'layout': 'monadtall', 'matches':[Match(wm_class=["pcmanfm"])]}),
-            ("4", {'layout': 'monadtall', 'matches':[Match(wm_class=["firefox"])]}),
+            ("4", {'layout': 'monadtall'}),
             ("5", {'layout': 'monadtall', 'matches':[Match(wm_class=["mpv"])]}),
             ("6", {'layout': 'monadtall','matches':[Match(wm_class=["Thunderbird"])]})]
 #-----------------------------------------------------------
@@ -141,10 +140,10 @@ for i, (name, kwargs) in enumerate(group_names, 1):
      keys.append(Key([mod], str(i), lazy.group[name].toscreen()))        # Switch to another group
      keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name))) # Send current window to another group
 
-layout_theme = {"border_width": 2,
-                "margin": 6,  
-                "border_focus": "#a13fa2",      
-                "border_normal": "#1D2330"   
+layout_theme = {"border_width": 5,
+                "margin": 5,  
+                "border_focus": "#483C6C",      
+                "border_normal": "#161220"   
                 }
 
 layouts = [    
@@ -242,12 +241,12 @@ widget.GroupBox(
                     padding_x=5,
                     borderwidth=1,
                     active=[ "#f1ffff", "#f1ffff"],
-                    inactive=colors[3],#[ "#4c566a", "#4c566a"],
+                    inactive=colors[3], #[ "#7f7f7f", "#7f7f7f"],
                     rounded=True,
                     highlight_method='block',
                     urgent_alert_method='block',
-                    urgent_border=["#F07178","#F07178"],
-                    this_current_screen_border=["#a13fa2","#a13fa2"],
+                    urgent_border=["#bf616a","#bf616a"],
+                    this_current_screen_border=["#7442c6","#7442c6"],
                     this_screen_border=["#353c4a","#353c4a"],
                     other_current_screen_border=["#0f101a","#0f101a"],
                     other_screen_border=["#0f101a","#0f101a"],
@@ -485,11 +484,11 @@ widget.TextBox(
             ],
             38,
          #   opacity=0.92,
-margin=[0, -4, 21, -4],
+margin=[0, -2, 12, -2],
         ),
-        bottom=bar.Gap(18),
-        left=bar.Gap(18),
-        right=bar.Gap(18),
+        bottom=bar.Gap(15),
+        left=bar.Gap(15),
+        right=bar.Gap(15),
     ),
 ]
 

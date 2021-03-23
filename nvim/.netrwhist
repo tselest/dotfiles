@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/tselest/.config/vifm/colors'
+let g:netrw_dirhist_1='/home/tselest/.config/vifm'
+let g:netrw_dirhist_0='/home/tselest/.config/vifm/colors'
+let g:netrw_dirhist_9='/home/tselest'
+let g:netrw_dirhist_8='/home/tselest/.config'
+let g:netrw_dirhist_7='/home/tselest/.config/vifm'
+let g:netrw_dirhist_6='/home/tselest/.config/vifm/colors'
+let g:netrw_dirhist_5='/home/tselest/.config/vifm'
+let g:netrw_dirhist_4='/home/tselest/.config'
+let g:netrw_dirhist_3='/home/tselest'
