@@ -1,4 +1,6 @@
 ## Dotfiles for my Arch Linux system
 
+![screen_2021-03-23-20:29:33](https://user-images.githubusercontent.com/47558926/112205953-49780d00-8c0d-11eb-81ba-f8ac0106e1ed.png)
 
-![screen_2021-03-13-17:32:37](https://user-images.githubusercontent.com/47558926/111035497-867d1c00-8423-11eb-8d44-7a23286c56d1.png)
+![screen_2021-03-23-20:34:26](https://user-images.githubusercontent.com/47558926/112205931-44b35900-8c0d-11eb-8324-8334e0edbc7b.png)
+
