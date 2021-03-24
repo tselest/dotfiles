@@ -1,0 +1,67 @@
+configuration {
+  display-run: " ";
+  display-drun: "  ";
+  display-window: "  ";
+  drun-display-format: "{icon} {name}";
+  font: "JetBrainsMonoMedium Nerd Font Mono 13";
+  modi: "window,run,drun";
+}
+
+* {
+  bg: #282a36;
+  bg-alt: #44475a;
+  
+  fg: #f8f8f2;
+
+  purple: #483c6c;
+  pink: #bd93f9;
+
+  background-color: @bg;
+  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+element {
+  padding: 12;
+  orientation: vertical;
+  text-color: @purple;
+}
+
+element selected {
+  text-color: @pink;
+}
+
+entry {
+  background-color: @purple;
+  padding: 12 0 12 3;
+  text-color: @fg;
+}
+
+inputbar {
+  children: [prompt, entry];
+}
+
+listview {
+  columns: 1;
+  lines: 8;
+}
+
+mainbox {
+  children: [inputbar, listview];
+}
+
+prompt {
+  background-color: @purple;
+  enabled: true;
+  font: "JetBrainsMonoMedium Nerd Font Mono 13";
+  padding: 12 0 0 12;
+  text-color: @fg;
+}
+
+window {
+  transparency: "real";
+}
+

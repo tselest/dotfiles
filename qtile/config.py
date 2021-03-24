@@ -30,6 +30,8 @@ mod = "mod4"
 term = "usr/bin/kitty"
 terminal = guess_terminal()
 home = os.path.expanduser('~')
+# launcher = "/home/tselest/.config/rofi/launchers/colorful/launcher.sh"
+# powermenu = "/home/tselest/.config/rofi/applets/menu/powermenu.sh"      
 
 def update():
     qtile.cmd_spawn(terminal + "-e yay")
@@ -38,7 +40,7 @@ def pavu():
     qtile.cmd_spawn('pavucontrol')
 
 def roffi():
-    qtile.cmd_spawn(" rofi -show p -modi p:rofi-power-menu   -theme gruvbox-dark   -font 'JetbrainsMonoMedium Nerd Font Mono 13'   -width 20   -lines 6")
+    qtile.cmd_spawn(" rofi -show p -modi p:rofi-power-menu -width 20")
 
 def power():
     qtile.cmd_spawn("xfce4-power-manager-settings")
@@ -98,9 +100,12 @@ keys = [
     Key([mod], "d", lazy.spawn("dmenu_run -h 28 ")),
     Key([mod], "p", lazy.spawn("firefox --private-window")),
     Key([mod], "t", lazy.spawn("firefox")),
-    Key([mod], "f", lazy.spawn("rofi -combi-modi window,drun,ssh -theme gruvbox-dark -font 'JetbrainsMonoMedium Nerd Font Mono 13' -show combi")),
+    Key([mod], "f", lazy.spawn("rofi -show drun")),
+    #Key([mod], "x", lazy.spawn(powermenu)),
+
     #Key([mod], "g", lazy.spawn("rhythmbox")),
     Key([], "Print", lazy.spawn(["sh", "-c", " maim -u ~/Pictures/screenshots/screen_$(date +%Y-%m-%d-%T).png"])), 
+    Key([mod], "Print", lazy.spawn(["sh", "-c", " maim -s -u ~/Pictures/screenshots/screen_$(date +%Y-%m-%d-%T).png"])), 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
